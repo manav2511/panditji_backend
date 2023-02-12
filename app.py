@@ -181,6 +181,12 @@ def products():
         data = database.getAllProducts()
         return jsonify(data)
 
+@app.route('/getAllServices', methods = ['GET'])
+def services():
+    if(request.method == 'GET'):
+        data = database.getAllServices()
+        return jsonify(data)
+
 # A simple function to calculate the square of a number
 # the number to be squared is sent in the URL when we use GET
 # on the terminal type: curl http://127.0.0.1:5000 / home / 10
